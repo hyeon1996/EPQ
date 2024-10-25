@@ -1,3 +1,6 @@
+# Exclusively Penalized Q-learning for Offline Reinforcement Learning
+
+This repository considers the implementation of the paper "Exclusively Penalized Q-learning for Offline Reinforcement Learning" which has been accepted to Neurips 2024 as a spotlight paper.
 # Installation Guide
 
 1. Create conda env 
