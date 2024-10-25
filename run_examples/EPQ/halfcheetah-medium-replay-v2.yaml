@@ -1,0 +1,61 @@
+algorithm: EPQ
+algorithm_kwargs:
+  batch_size: 512
+  max_path_length: 1000
+  min_num_steps_before_training: 1000
+  num_epochs: 3000
+  num_eval_steps_per_epoch: 1000
+  num_expl_steps_per_train_loop: 1000
+  num_trains_per_train_loop: 1000
+
+buffer_filename: null
+epsilon: 0.5
+zeta: 2.0
+
+layer_size: 256
+load_buffer: true
+logger_kwargs:
+  project_name: EPQ
+  snapshot_gap: 250
+  snapshot_mode: gap_and_last
+model_algo_name: Q_beta
+model_dir: "place model directory"
+model_itr: 1000
+
+nn: 50
+
+trainer_kwargs:
+
+  c_min: 0.2
+  discount: 0.99
+  policy_lr: 0.0001
+  qf_lr: 0.0003
+
+  reward_scale: 1
+  soft_target_tau: 0.005
+  deterministic_backup: true
+
+  entropy_const: -1.0
+  kl_weight: 0.5
+  lagrange_thresh: -1.0
+  tot_weight_clip: 0.005
+  logn: 1
+  logsum: False
+  max_q_backup: false
+  min_q_version: 3
+  min_q_weight: 20.0
+  num_qs: 2
+  num_random: 10
+  policy_eval_start: 10000
+  tau: 2.0
+  ratio_temp: 1.0
+  with_lagrange: false
+
+policy: tanh
+replay_buffer_size: 3000000
+seed: 0
+sparse_reward: false
+
+use_wandb: False
+version: normal
+use_q_beta: False

@@ -1,0 +1,32 @@
+algorithm: VAE_bc
+algorithm_kwargs:
+  batch_size: 512
+  max_path_length: 1000
+  min_num_steps_before_training: 1000
+  num_epochs: 3000
+  num_eval_steps_per_epoch: 1000
+  num_expl_steps_per_train_loop: 1000
+  num_trains_per_train_loop: 1000
+
+buffer_filename: null
+
+layer_size: 1024
+
+load_buffer: true
+logger_kwargs:
+  project_name: VAE_bc
+  snapshot_gap: 1000
+  snapshot_mode: gap_and_last
+
+trainer_kwargs:
+  discount: 0.0
+  policy_lr: 0.0001
+  qf_lr: 0.0001
+
+policy: tanh
+replay_buffer_size: 3000000
+seed: 0
+sparse_reward: false
+
+use_wandb: False
+version: normal
